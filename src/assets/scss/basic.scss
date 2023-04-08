@@ -16,6 +16,113 @@ a {
     }
 }
 
+/* login */
+.login_page_wrp {
+    display: flex;
+    width: 100%;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+
+    .banner_wrp {
+        background-image: url(../images/banner.png);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        position: relative;
+        width: 70%;
+    }
+
+    .login_wrp {
+        min-height: 100vh;
+        display: flex;
+        padding: 50px;
+        width: 30%;
+        flex-wrap: wrap;
+        position: relative;
+        align-items: center;
+
+        .login_cnt {
+            width: 100%;
+
+            .logo {
+                .app_name {
+                    width: 100%;
+                    display: flex;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    margin: 10px 0 0;
+                    color: $secondary_color;
+                }
+            }
+
+            .login_form {
+                width: 95%;
+                margin: 20px 0 0;               
+
+                .mat-mdc-form-field {
+                    width: 100%;
+                }
+
+                .login_link {
+                    display: flex;
+                    margin: 15px 0 0;
+                    list-style: none;
+                    align-items: center;
+                    justify-content: center;
+
+                    li {
+                        display: flex;
+                        align-items: center;
+                        padding: 0 5px;
+                        margin: 0 5px;
+                        position: relative;
+                        
+                        &:first-child {
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                width: 1px;
+                                height: 20px;
+                                right: -5px;
+                                background: $line;
+                            }
+                        }
+                        a {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .login_footer {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: auto 0 -25px;
+            padding-top: 30px;
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: flex;
+
+                li {
+                    padding: 0 5px;
+
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        
+    }
+}
+
 /* Header */
 .header_wrp {
     width: 100%;
@@ -60,8 +167,8 @@ a {
             font-weight: 500;
     
             .profile_pic {
-                width: 35px;
-                height: 35px;
+                width: 30px;
+                height: 30px;
                 background: $title_bg;
                 margin-right: 10px;
                 border: 1px solid $red;

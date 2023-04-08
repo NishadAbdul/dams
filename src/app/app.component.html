@@ -1,4 +1,4 @@
-<header class="header_wrp">
+<header class="header_wrp" *ngIf="router.url != '/login'">
   <div class="logo">
     <a href="#" routerLink="home">
       <img src="../assets/images/SBL_logo.svg" alt="SBL" />
@@ -6,7 +6,7 @@
     </a>    
   </div>
   <div class="login">
-    <button class="login_btn" routerLink="login" mat-button>
+    <button class="login_btn" routerLink="login" mat-button *ngIf="router.url != '/login' && router.url == '/home'">
       <span class="material-icons me-1">
         person_outline
       </span>
@@ -14,7 +14,7 @@
     </button>
   
 
-    <!-- <div class="user_profile" mat-button [matMenuTriggerFor]="menu">
+    <div class="user_profile" mat-button [matMenuTriggerFor]="menu" *ngIf="router.url != '/login' && router.url != '/home'">
       <div class="profile_pic">
         <img src="../assets/images/placeholder.png" />
       </div>
@@ -29,7 +29,7 @@
         <mat-icon>logout</mat-icon>
         Logout
       </button>
-    </mat-menu> -->
+    </mat-menu>
 
   </div>
  
