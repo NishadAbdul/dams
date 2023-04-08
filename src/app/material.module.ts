@@ -13,6 +13,7 @@ import { MatTableModule } from "@angular/material/table";
 import { MatRadioModule } from '@angular/material/radio';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatTableModule,
     MatRadioModule,
     MatAutocompleteModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatMenuModule
   ]
 })
 export class MaterialModule { }

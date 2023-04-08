@@ -1,0 +1,24 @@
+/* buttons */
+.primary_button {
+    background-color: $primary_color !important;
+    color: $white;
+    height: 40px !important;
+    @include border-radius(25px !important);
+}
+.secondary_button {
+    height: 40px !important;
+    background: $white !important;
+    @include border-radius(25px !important);
+}
+
+/* Material customized */
+.mat-mdc-select, .mdc-list-item__primary-text, .mdc-floating-label {
+    font-size: 14px !important;
+}
+.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label,
+.mdc-text-field--filled .mdc-floating-label--float-above {
+    color: $primary_color !important;
+}
+.mat-mdc-raised-button:not(:disabled) {
+    background-color: $primary_color !important;
+}

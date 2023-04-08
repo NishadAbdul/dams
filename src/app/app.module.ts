@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { DigitalizationComponent } from './digitalization/digitalization.component';
 import { UsersComponent } from './users/users.component';
 import { MaterialModule } from './material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,12 +16,13 @@ import { MaterialModule } from './material.module';
     LoginComponent,
     HomeComponent,
     DigitalizationComponent,
-    UsersComponent
+    UsersComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
