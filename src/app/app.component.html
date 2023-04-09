@@ -1,48 +1,111 @@
-<header class="header_wrp" *ngIf="router.url != '/login'">
-  <div class="logo">
-    <a href="#" routerLink="home">
-      <img src="../assets/images/SBL_logo.svg" alt="SBL" />
-      <span class="app_name">DIGITAL ARCHIVAL <br />MANAGEMENT SYSTEM</span>
-    </a>    
-  </div>
-  <div class="login">
-    <button class="login_btn" routerLink="login" mat-button *ngIf="router.url != '/login' && router.url == '/home'">
-      <span class="material-icons me-1">
-        person_outline
-      </span>
-      Login
-    </button>
-  
+<main class="main_wrp"  [ngClass]="{'show_menu': router.url != '/login' && router.url != '/home'}">
 
-    <div class="user_profile" mat-button [matMenuTriggerFor]="menu" *ngIf="router.url != '/login' && router.url != '/home'">
-      <div class="profile_pic">
-        <img src="../assets/images/placeholder.png" />
+  <section class="page_wrp" role="main"  [ngClass]="{'pt-0': router.url == '/login'}">
+
+    <!-- Header -->
+    <header class="header_wrp" *ngIf="router.url != '/login'">
+      <div class="logo">
+        <a href="#" routerLink="home">
+          <img src="../assets/images/SBL_logo.svg" alt="SBL" />
+          <span class="app_name">DIGITAL ARCHIVAL <br />MANAGEMENT SYSTEM</span>
+        </a>    
       </div>
-      John smith
+      <div class="login">
+        <button class="login_btn" routerLink="login" mat-button *ngIf="router.url != '/login' && router.url == '/home'">
+          <span class="material-icons me-1">
+            person_outline
+          </span>
+          Login
+        </button>
+      
+
+        <div class="user_profile" mat-button [matMenuTriggerFor]="menu" *ngIf="router.url != '/login' && router.url != '/home'">
+          <div class="profile_pic">
+            <img src="../assets/images/placeholder.png" />
+          </div>
+          John smith
+        </div>
+        <mat-menu #menu="matMenu" xPosition="before">
+          <button mat-menu-item>
+            <mat-icon>person_outline</mat-icon>
+            View Profile
+          </button>
+          <button mat-menu-item>
+            <mat-icon>logout</mat-icon>
+            Logout
+          </button>
+        </mat-menu>
+
+      </div>
+    
+    </header>
+
+    <!-- Nav -->
+    <nav class="nav_wrp" *ngIf="router.url != '/login' && router.url != '/home'">
+      <ul>
+        <li>
+          <a href="#">
+            <mat-icon>home</mat-icon>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="active">
+            <mat-icon>layers</mat-icon>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <mat-icon>people</mat-icon>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <mat-icon>attach_file</mat-icon>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <mat-icon>settings</mat-icon>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sub_menu_wrp" *ngIf="router.url != '/login' && router.url != '/home'">
+      <h3>Data Digitization</h3>
+      <ul>
+        <li>
+          <a href="#" class="active">
+            <mat-icon>grid_view</mat-icon>
+            Data Entry List
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <mat-icon>subject</mat-icon>
+            User Defined Data
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <mat-icon>date_range</mat-icon>
+            Dynamic Data Fields
+          </a>
+        </li>
+      </ul>
     </div>
-    <mat-menu #menu="matMenu" xPosition="before">
-      <button mat-menu-item>
-        <mat-icon>person_outline</mat-icon>
-        View Profile
-      </button>
-      <button mat-menu-item>
-        <mat-icon>logout</mat-icon>
-        Logout
-      </button>
-    </mat-menu>
 
-  </div>
- 
-</header>
+    <!-- Pages -->
+    <router-outlet></router-outlet>   
+    
 
-<!-- <a routerLink="home">Home</a>
-    <a routerLink="login">Login</a>
-    <a routerLink="digitalization">Digitalization</a>
-    <a routerLink="users">User Management</a> -->
 
-<div class="content" role="main">
-  <router-outlet></router-outlet>    
-</div>
+  </section>
+
+</main>
+
+
+
 
 
 

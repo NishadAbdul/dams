@@ -1,14 +1,82 @@
+/* Label */
+.label {
+    font-weight: 500;
+}
+
 /* buttons */
 .primary_button {
     background-color: $primary_color !important;
     color: $white;
     height: 40px !important;
     @include border-radius(25px !important);
+
+    .mdc-button__label {
+        color: $white;
+    }
 }
 .secondary_button {
     height: 40px !important;
     background: $white !important;
+    color: $primary_color !important;
+    border-color: $primary_color !important;
     @include border-radius(25px !important);
+}
+.outline_btn {
+    border: 1px solid $primary_color;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px 0 15px;
+    font-weight: 500;
+    color: $primary_color;
+    @include border-radius(25px);
+}
+.button_row {
+    .mdc-button {
+        min-width: 100px;
+        margin-left: 10px;
+    }
+}
+.black_btn {
+    .mdc-button__label, .mat-icon {
+        color: $black;
+    }
+}
+/* File Upload */
+.upload_wrp {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $field_bg;
+    border: 2px dashed $primary_color;
+
+    .label {
+        font-size: 1rem;
+    }
+    input[type="file"] {
+        visibility: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+/* tabs */
+.form_tab {
+    .mat-mdc-tab-labels {
+        border: 1px solid $line;
+        @include border-radius(4px);
+    }
+    .mat-mdc-tab.mdc-tab {
+        height: 40px;
+        padding: 0;
+
+        &:not(.mat-mdc-tab-disabled).mdc-tab--active {
+            background: rgba(105, 78, 214, 0.08);
+        }
+    }
 }
 
 /* Material customized */
@@ -16,9 +84,6 @@
     font-size: 14px !important;
 }
 .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label,
-.mdc-text-field--filled .mdc-floating-label--float-above {
+.mdc-text-field--filled .mdc-floating-label--float-above, .mat-mdc-raised-button:not(:disabled) {
     color: $primary_color !important;
-}
-.mat-mdc-raised-button:not(:disabled) {
-    background-color: $primary_color !important;
 }

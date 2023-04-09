@@ -1,1 +1,254 @@
-<p>digitalization works!</p>
+<section class="content_wrp">
+    <div class="page_title">
+        <div class="icon">
+            <mat-icon>description</mat-icon>
+        </div>
+        <h4>Add Data Entry - Gazette</h4>    
+        <div class="step">
+            Step 1/2
+        </div>
+    </div>
+    
+    <div class="container-fluid mt-4">
+        <div class="row">
+
+            <!-- Step 1-->
+            <!-- <div class="col-lg-9 col-sm-12">
+                
+    
+                <div class="upload_wrp">
+                    <label class="label">Drag and drop file here or</label>
+                    <label for="file" class="outline_btn mt-2">
+                        <mat-icon>add</mat-icon>
+                        Select File
+                    </label>
+                    <input type="file" name="file" id="file" />
+                </div>
+
+                <h5 class="form_title my-4">File Meta Tags</h5>
+
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6">
+                        <mat-form-field appearance="fill" class="w-100">
+                            <mat-label>Short Title</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <mat-form-field appearance="fill" class="w-100">
+                            <mat-label>Publisher</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <mat-form-field appearance="fill" class="w-100">
+                            <mat-label>Type</mat-label>
+                            <mat-select>
+                              <mat-option value="one">Extra Ordinary</mat-option>
+                              <mat-option value="two">Second option</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <mat-form-field appearance="fill" class="w-100">
+                            <mat-label>Department</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <mat-form-field appearance="fill" class="w-100">
+                            <mat-label>Gazette Vol</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <mat-form-field appearance="fill" class="w-100">
+                            <mat-label>Gazette No</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <mat-form-field appearance="fill" class="w-100">
+                            <mat-label>Year</mat-label>
+                            <mat-select>
+                              <mat-option value="one">2022</mat-option>
+                              <mat-option value="two">2023</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <mat-form-field appearance="fill" class="w-100">
+                            <mat-label>Date</mat-label>
+                            <input matInput [matDatepicker]="picker">
+                            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="button_row d-flex justify-content-end">
+                        <button mat-stroked-button class="secondary_button">Back</button>
+                        <button mat-stroked-button class="secondary_button">Reset</button>
+                        <button mat-raised-button color="primary" class="primary_button">Next</button>
+                    </div>
+
+                </div>
+    
+            </div> -->
+
+            <!-- Step 2-->
+            <div class="col-lg-5 col-sm-6">
+                <mat-card>
+                    <mat-card-content>
+                        <mat-tab-group class="form_tab">
+                            <mat-tab label="File Meta Tags">
+                                <h5 class="form_title my-4">File Meta Tags</h5>
+
+                                <mat-form-field appearance="fill" class="w-100">
+                                    <mat-label>Short Title</mat-label>
+                                    <input matInput>
+                                </mat-form-field>
+
+                                <mat-form-field appearance="fill" class="w-100">
+                                    <mat-label>Publisher</mat-label>
+                                    <input matInput>
+                                </mat-form-field>
+
+                                <mat-form-field appearance="fill" class="w-100">
+                                    <mat-label>Type</mat-label>
+                                    <mat-select>
+                                      <mat-option value="one">Extra Ordinary</mat-option>
+                                      <mat-option value="two">Second option</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                                <mat-form-field appearance="fill" class="w-100">
+                                    <mat-label>Department</mat-label>
+                                    <input matInput>
+                                </mat-form-field>
+
+                                <mat-form-field appearance="fill" class="w-100">
+                                    <mat-label>Gazette Vol</mat-label>
+                                    <input matInput>
+                                </mat-form-field>
+
+                                <mat-form-field appearance="fill" class="w-100">
+                                    <mat-label>Gazette No</mat-label>
+                                    <input matInput>
+                                </mat-form-field>
+
+                                <mat-form-field appearance="fill" class="w-100">
+                                    <mat-label>Year</mat-label>
+                                    <mat-select>
+                                      <mat-option value="one">2022</mat-option>
+                                      <mat-option value="two">2023</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                                <mat-form-field appearance="fill" class="w-100">
+                                    <mat-label>Date</mat-label>
+                                    <input matInput [matDatepicker]="picker">
+                                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                </mat-form-field>
+
+                                
+                                <div class="button_row d-flex justify-content-end pb-1">
+                                    <button mat-stroked-button class="secondary_button">Reset</button>
+                                    <button mat-raised-button color="primary" class="primary_button">Next</button>
+                                </div>
+                                
+                            </mat-tab>
+
+                            <mat-tab label="Content Meta Tags">
+                                <h5 class="form_title my-4">Content Meta Tags</h5>
+                                <label class="label mb-2">Apply tags on page:</label>
+                                <mat-chip-listbox aria-label="Fish selection" class="mb-3">
+                                    <mat-chip-option selected>Current</mat-chip-option>
+                                    <mat-chip-option>All</mat-chip-option>
+                                    <mat-chip-option>Custom</mat-chip-option>
+                                </mat-chip-listbox>
+                                <label class="label mb-2">Meta Tags:</label>
+                                <ul class="meta_tags">
+                                    <li>
+                                        Library
+                                        <a href="#">
+                                            <mat-icon>cancel</mat-icon>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        2022
+                                        <a href="#">
+                                            <mat-icon>cancel</mat-icon>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        Parliament
+                                        <a href="#">
+                                            <mat-icon>cancel</mat-icon>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        Education
+                                        <a href="#">
+                                            <mat-icon>cancel</mat-icon>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        Public Issues
+                                        <a href="#">
+                                            <mat-icon>cancel</mat-icon>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <mat-form-field appearance="fill" class="w-100 mt-2">
+                                    <input matInput value="Mizoram">
+                                    <mat-icon matSuffix>close</mat-icon>
+                                </mat-form-field>
+                                <div class="button_row d-flex justify-content-end pb-1">
+                                    <button mat-stroked-button class="secondary_button">Back</button>
+                                    <button mat-raised-button color="primary" class="primary_button">Save</button>
+                                </div>
+                            </mat-tab>
+                          </mat-tab-group>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            <!-- <div class="col-lg-7 col-sm-6">
+                <div class="upload_tilte">
+                    <h6>Let’s start by uploading your file below..!</h6>
+                    <p>Only pdf files are accepted. File size should not exceed 20MB</p>
+                </div>
+                <div class="upload_wrp">
+                    <label class="label">Drag and drop file here or</label>
+                    <label for="file" class="outline_btn mt-2">
+                        <mat-icon>add</mat-icon>
+                        Select File
+                    </label>
+                    <input type="file" name="file" id="file" />
+                </div>
+                
+            </div> -->
+
+            <div class="col-lg-7 col-sm-6">
+               <div class="file_name">
+                    <p>soram-2022-latest.pdf</p>
+                    <button mat-raised-button class="black_btn ms-auto">
+                        <mat-icon>picture_as_pdf</mat-icon>
+                        Convert PDF to Text
+                    </button>
+                    <button mat-raised-button class="black_btn ms-3">
+                        <mat-icon>summarize</mat-icon>
+                        Summary
+                    </button>
+               </div>                
+               <mat-card class="mt-3">
+                <mat-card-content>Simple card</mat-card-content>
+               </mat-card>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
