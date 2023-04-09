@@ -88,5 +88,50 @@
             padding: 30px;
         }
     }
-    
+}
+@media (max-width: 1199px) {
+    .header_wrp .login {
+        display: none;
+    }
+    .main_wrp {
+        &.show_menu {
+            padding-left: 0;
+        }
+    }
+    .search_wrp {
+        .search_cnt {
+            width: 80%;
+        }
+
+    }
+    .menu_btn {
+        display: inline-flex !important;
+    }
+    .nav_wrp {
+        position: absolute;
+        z-index: 3;
+        height: 100%;
+    }
+    .sub_menu_wrp {
+        left: 80px !important;
+    }
+    .content_wrp {
+        .file_name {
+            display: inline-block;    
+            
+            p{
+                margin-bottom: 15px;
+            }
+        }
+
+    }
+}
+@media (max-width: 1365px) {
+    .sub_menu_wrp {
+        position: absolute;
+        left: 0;
+    }
+    .content_wrp {
+        padding-left: 20px;
+    }
 }

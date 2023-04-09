@@ -206,6 +206,11 @@ a {
 }
 
 /* Nav */
+.menu_btn {
+    margin: 0 0 0 16px;
+    display: none !important;
+    background: linear-gradient(0deg, rgba(14, 53, 88, 0.7), rgba(14, 53, 88, 0.7)), linear-gradient(180deg, #0E3558 0%, #FF0001 100%), rgba(14, 53, 88, 0.7);
+}
 .nav_wrp {
     width: 80px;
     position: fixed;
@@ -257,7 +262,7 @@ a {
     left: 80px;
     top: 0;
     background: $white;
-    z-index: 1;
+    z-index: 2;
     padding: 60px 0 5px 5px;
     @include box-shadow(5px,0px, 4px, -4px, rgba(0,0,0,0.1), false);
 
@@ -677,7 +682,15 @@ a {
         a {
             text-decoration: none;
             margin-left: 5px;
+            color: $black;
+            opacity: 0.8;
+
+            &:hover {
+                color: $primary_color;
+                opacity: 1;
+            }
         }
+
     }
 
     .table_title {
