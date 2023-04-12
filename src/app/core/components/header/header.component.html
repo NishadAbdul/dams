@@ -1,0 +1,39 @@
+<header class="header_wrp" *ngIf="router.url != '/login'">
+    <button mat-mini-fab color="primary" class="menu_btn" aria-label="menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="logo">
+      <a href="jacascript:void(0)" routerLink="/home/search">
+        <img src="../assets/images/SBL_logo.svg" alt="SBL" />
+        <span class="app_name">DIGITAL ARCHIVAL <br />MANAGEMENT SYSTEM</span>
+      </a>    
+    </div>
+    <div class="login">
+      <button class="login_btn" routerLink="login" mat-button *ngIf="router.url != '/login' && router.url == '/home'">
+        <span class="material-icons me-1">
+          person_outline
+        </span>
+        Login
+      </button>
+    
+
+      <div class="user_profile" mat-button [matMenuTriggerFor]="menu" *ngIf="router.url != '/login' && router.url != '/home'">
+        <div class="profile_pic">
+          <img src="../assets/images/placeholder.png" />
+        </div>
+        John smith
+      </div>
+      <mat-menu #menu="matMenu" xPosition="before">
+        <button mat-menu-item (click)="goToAdminPortal()">
+          <mat-icon>person_outline</mat-icon>
+          Admin Portal
+        </button>
+        <button mat-menu-item (click)="logoutUser()">
+          <mat-icon>logout</mat-icon>
+          Logout
+        </button>
+      </mat-menu>
+
+    </div>
+  
+  </header>
