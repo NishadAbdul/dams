@@ -1,5 +1,5 @@
-<main class="main_wrp"  [ngClass]="{'show_menu': router.url != '/' && router.url != '/home/search'}">
-  <section class="page_wrp" role="main"  [ngClass]="{'pt-0': router.url == '/'}">
+<main class="main_wrp"  [ngClass]="{'show_menu': router.url != '/login' && router.url != '/home/search'}">
+  <section class="page_wrp" role="main"  [ngClass]="{'pt-0': router.url == '/login'}">
     <!-- Pages -->
     <router-outlet></router-outlet>
   </section>
